@@ -1,31 +1,67 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { graphql } from 'gatsby'
+import { Header } from '../components/Header'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+export const query = graphql`
+    query {
+        alldata {
+          headers {
+            logo {
+              url
+            }
+            home
+            taxi
+            booking
+            contactUs
+            titleBook
+            number
+            titleEveryday
+            btnSearch
+            arrowLeft {
+              url
+            }
+            arrowRigh {
+              url
+            }
+            car1 {
+              url
+            }
+            car2 {
+              url
+            }
+            car3{
+              url
+            }
+          }
+        }
+    }
+`
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+export default function Index({ data }) {
 
-export default IndexPage
+    console.log(data.alldata)
+
+    const dataHeaders = data.alldata.headers[0]
+
+    return (
+        <div>
+           <p>Olá</p>
+           <Header
+                logo={dataHeaders.logo.url}
+                home={dataHeaders.home}
+                taxi={dataHeaders.taxi}
+                booking={dataHeaders.booking}
+                contactUs={dataHeaders.contactUs}
+                titleBook={dataHeaders.titleBook}
+                number={dataHeaders.number}
+                titleEveryday={dataHeaders.titleEveryday}
+                btnSearch={dataHeaders.btnSearch}
+                arrowLeft={dataHeaders.arrowLeft.url}
+                arrowRigh={dataHeaders.arrowRigh.url}
+                car1={dataHeaders.car1.url}
+                car2={dataHeaders.car2.url}
+                car3={dataHeaders.car3.url}
+            />
+        </div>
+    )
+}
