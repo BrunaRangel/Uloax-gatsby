@@ -91,11 +91,11 @@ margin: 0px 0px 10px;
 `
 
 export const BoxImage = styled.div`
-margin:2.5rem 0px 0px;
+margin:3rem 0px 0px;
 `
 
 export const Image = styled.img`
-width:480px;
+width:495px;
 `
 
 export const Box2 = styled.div`
@@ -140,7 +140,7 @@ margin:0px;
 
 
 export const Input = styled.input`
-width:100%;
+width:97%;
 background-color:#e1e1e1;
 color:#000;
 border:none;
@@ -149,6 +149,7 @@ border-radius:5px;
 text-transform:uppercase;
 font-size:1.2rem;
 padding-left:1rem;
+margin:0px auto;
 outline-color:#cfcfcf;
 &::placeholder {
     color:#1a1a1a;
@@ -173,20 +174,35 @@ text-transform:uppercase;
 
 export const BoxBtns = styled.div`
 width:60px;
+position: absolute;
+bottom:247px;
+left:66px;
 `
 
 export const BtnArrowLeft = styled.button`
-width:40px;
+width:65px;
+height:65px;
+border-radius:50px;
+border:none;
+background-color:#fad305;
+margin-bottom:0.5rem;
+display:flex;
+align-items: center;
+justify-content: center;
 `
 
 export const ArrowLeft = styled.img`
-width:20px;
+width:16px;
 `
 
 export const BtnArrowRigh = styled.button`
-width:40px;
+width:65px;
+height:65px;
+border-radius:50px;
+border:none;
+background-color:#fad305;
 `
 
 export const ArrowRigh = styled.img`
-width:20px;
+width:16px;
 `
