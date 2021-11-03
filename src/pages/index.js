@@ -15,6 +15,7 @@ export const query = graphql`
             contactUs
             titleBook
             number
+            textCityTaxi
             titleEveryday
             btnSearch
             arrowLeft {
@@ -45,7 +46,6 @@ export default function Index({ data }) {
 
     return (
         <div>
-           <p>Olá</p>
            <Header
                 logo={dataHeaders.logo.url}
                 home={dataHeaders.home}
@@ -54,6 +54,7 @@ export default function Index({ data }) {
                 contactUs={dataHeaders.contactUs}
                 titleBook={dataHeaders.titleBook}
                 number={dataHeaders.number}
+                textCityTaxi={dataHeaders.textCityTaxi}
                 titleEveryday={dataHeaders.titleEveryday}
                 btnSearch={dataHeaders.btnSearch}
                 arrowLeft={dataHeaders.arrowLeft.url}
