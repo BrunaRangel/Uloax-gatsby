@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Header } from '../components/Header'
+import Main from '../components/Main'
 
 export const query = graphql`
     query {
@@ -63,6 +64,7 @@ export default function Index({ data }) {
                 car2={dataHeaders.car2.url}
                 car3={dataHeaders.car3.url}
             />
+            <Main />
         </div>
     )
 }
