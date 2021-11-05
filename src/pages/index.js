@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import Main from '../components/Main'
+
 export const query = graphql`
     query {
         alldata {
@@ -66,6 +68,10 @@ export const query = graphql`
             instagram
             titleNewsletter
             btnSubscribe
+            textReserved
+            imageLink{
+              url
+            }
           }
         }
     }
@@ -98,6 +104,7 @@ export default function Index({ data }) {
               car2={dataHeaders.car2.url}
               car3={dataHeaders.car3.url}
             />
+            <Main />
             <Footer 
               titleAddress={dataFooters.titleAddress}
               descriptionAddress={dataFooters.descriptionAddress}
@@ -120,7 +127,10 @@ export default function Index({ data }) {
               instagram={dataFooters.instagram}
               titleNewsletter={dataFooters.titleNewsletter}
               btnSubscribe={dataFooters.btnSubscribe}
+              textReserved={dataFooters. textReserved}
+              imageLink={dataFooters.imageLink.url}
             />
+            
         </div>
     )
 }
