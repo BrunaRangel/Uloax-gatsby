@@ -7,6 +7,7 @@ display:flex;
 align-items: center;
 flex-direction:column;
 background-color: #1a1a1a;
+margin-bottom:99px;
 `
 
 export const BoxMenu = styled.div`
